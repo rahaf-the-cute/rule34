@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/rule34/assets/favicon.17e50649.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-  <script type="module" crossorigin src="/rule34/assets/index.afad309d.js"></script>
+  <script type="module" crossorigin src="/rule34/assets/index.ced99b73.js"></script>
   <link rel="modulepreload" href="/rule34/assets/vendor.edcee13f.js">
   <link rel="stylesheet" href="/rule34/assets/index.a9aae250.css">
 </head>
@@ -33,7 +33,7 @@
         <div class="col-8 col-lg-4">
           <fieldset>
           <div class="input-group my-3">
-              <input list="serach" type="search" v-model="store.word" @input="store.push()" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="button-addon2">
+              <input list="serach" type="search" @input="store.push($el)" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="button-addon2">
               <datalist id="serach">
                 <option v-for="(val, i) in store.list" :value="val" :key="i"></option>
               </datalist>
