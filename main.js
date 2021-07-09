@@ -1,4 +1,5 @@
 import './node_modules/bootstrap/dist/css/bootstrap.min.css'
+import { Modal } from 'bootstrap/dist/js/bootstrap.esm.js';
 import './style.css'
 import { createApp, reactive } from 'https://unpkg.com/petite-vue?module'
 const store = reactive({
@@ -39,7 +40,8 @@ const store = reactive({
     _.src = 'https://imagex.aratech.co/?url=' + encodeURI(_url.replace(/(http|https):\/\//, ''));
     _.addEventListener("error", ()=> {_.src = "https://api.allorigins.win/raw?url=" + _url})
     _.addEventListener("load", ()=> this.imageSelected = _.src)
-  }
+  },
+  showModal: ()=> {new Modal(document.querySelector('.modal')).show()}
 })
     createApp({
       store
