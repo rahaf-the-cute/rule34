@@ -1,0 +1,43 @@
+[data-grid] {
+  min-height: calc(100vw - 3.5rem);
+}
+[data-grid] > div{
+  margin: .75rem;
+  padding: .5rem;
+}
+.card-img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-body > div > img {
+  max-width: 150px;
+  max-height: 135px;
+  object-fit: cover;
+}
+[data-image]{
+  margin: auto;
+  padding: 0;
+}
+.card-text {
+  color: #000000;
+  font-size: small;
+}
+.bi {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.25em;
+    margin-right: .2rem;
+}
+.info-body {
+    padding: 1rem .75rem;
+}
+.card-body {
+  padding: inherit;
+}
+a.goto, a.goto:visited, a:hover {
+  color: unset !important;
+  text-decoration: none;
+  cursor: pointer;
+}
