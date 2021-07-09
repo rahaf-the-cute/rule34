@@ -6,8 +6,8 @@ const store = reactive({
   url: "https://script.google.com/macros/s/AKfycbzQOgdsxPa-eow4rJ0FZNWeZ4JK1Rx3YDieGcyuVtTiiX5V535Y4OakCMgU7fzW3DVkNg/exec?",
   word: "",
   list: [],
-  push: function(){
-    this.word = this.word.replace(" ", "_");
+  push: function($el){
+    this.word = $el.value;
     this.list = [];
     (async ()=>{
       if (this.word.length > 0){
@@ -44,5 +44,5 @@ const store = reactive({
   showModal: ()=> {new Modal(document.querySelector('.modal')).show()}
 })
     createApp({
-      store
+      store: store
     }).mount('#app')
