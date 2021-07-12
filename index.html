@@ -64,8 +64,8 @@
         </div> 
         <!--Card-->
       </section>
-      <div class="row justify-content-center row-cols-4">
-        <div class="btn-group my-3" role="group">
+      <div class="row justify-content-center">
+        <div class="btn-group my-3  col-lg-6 col-8" role="group">
           <button v-show="(store.page - 1) > 0" @click="store.page--; store.getList()"  class="btn btn-warning">Previous</button>
           <button v-show="store.lastPage > 1 && store.page != store.lastPage" @click="store.page++; store.getList()" class="btn btn-danger">Next</button>
         </div>
