@@ -7,9 +7,9 @@
     <title>Vite App</title>
   </head>
   <body>
-    <main class="container" id="app">
+    <main class="container" id="app" v-cloak>
       <div class="modal" tabindex="-1">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">Modal title</h5>
@@ -44,7 +44,7 @@
           </fieldset>
        </div>
       </div>
-      <section class="row justify-content-center" data-grid>
+      <section class="row justify-content-center row-cols-4" data-grid>
         <!--Card-->
         <div v-for="item in store.listData" class="col-lg-3 col-md-6 align-self-center" @click="store.setImage(item.imageLink); store.showModal()">
             <div class="card mt-2 bg-light">
@@ -65,7 +65,7 @@
         <!--Card-->
       </section>
       <div class="row justify-content-center">
-        <div class="btn-group" role="group">
+        <div class="btn-group my-3" role="group">
           <button v-show="(store.page - 1) > 0" @click="store.page--; store.getList()"  class="btn btn-warning">Previous</button>
           <button v-show="store.lastPage > 1 && store.page != store.lastPage" @click="store.page++; store.getList()" class="btn btn-danger">Next</button>
         </div>

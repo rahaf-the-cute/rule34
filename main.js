@@ -1,5 +1,6 @@
 import './node_modules/bootstrap/dist/css/bootstrap.min.css'
 import { Modal } from 'bootstrap/dist/js/bootstrap.esm.js';
+import 'https://unpkg.com/localbase@0.7.5/dist/localbase.dev.js?module'
 import './style.css'
 import { createApp, reactive } from 'https://unpkg.com/petite-vue?module'
 const store = reactive({

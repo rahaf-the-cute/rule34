@@ -1,5 +1,8 @@
+[v-cloak] {
+  display: none;
+}
 [data-grid] {
-  min-height: calc(100vw - 3.5rem);
+  min-height: calc(100vh - 10rem);
 }
 [data-grid] > div{
   margin: .75rem;
