@@ -5,12 +5,12 @@
     <link rel="icon" type="image/svg+xml" href="/rule34/assets/favicon.17e50649.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-  <script type="module" crossorigin src="/rule34/assets/index.f819dbd2.js"></script>
+  <script type="module" crossorigin src="/rule34/assets/index.923667dc.js"></script>
   <link rel="modulepreload" href="/rule34/assets/vendor.edcee13f.js">
-  <link rel="stylesheet" href="/rule34/assets/index.aa43f160.css">
+  <link rel="stylesheet" href="/rule34/assets/index.3052ce23.css">
 </head>
   <body>
-    <main class="container" id="app">
+    <main class="container" id="app" v-cloak>
       <div class="modal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -47,7 +47,7 @@
           </fieldset>
        </div>
       </div>
-      <section class="row justify-content-center" data-grid>
+      <section class="row justify-content-center row-cols-4" data-grid>
         <!--Card-->
         <div v-for="item in store.listData" class="col-lg-3 col-md-6 align-self-center" @click="store.setImage(item.imageLink); store.showModal()">
             <div class="card mt-2 bg-light">
