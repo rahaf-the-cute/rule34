@@ -44,7 +44,7 @@
           </fieldset>
        </div>
       </div>
-      <section class="row justify-content-center row-cols-4" data-grid>
+      <section class="row justify-content-center" data-grid>
         <!--Card-->
         <div v-for="item in store.listData" class="col-lg-3 col-md-6 align-self-center" @click="store.setImage(item.imageLink); store.showModal()">
             <div class="card mt-2 bg-light">
@@ -64,7 +64,7 @@
         </div> 
         <!--Card-->
       </section>
-      <div class="row justify-content-center">
+      <div class="row justify-content-center row-cols-4">
         <div class="btn-group my-3" role="group">
           <button v-show="(store.page - 1) > 0" @click="store.page--; store.getList()"  class="btn btn-warning">Previous</button>
           <button v-show="store.lastPage > 1 && store.page != store.lastPage" @click="store.page++; store.getList()" class="btn btn-danger">Next</button>
