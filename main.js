@@ -38,7 +38,11 @@ const store = reactive({
   setImage: function(_url){
     this.imageSelected = "";
     const _ = new Image();
-    _.src = 'https://imagex.aratech.co/?url=' + encodeURI(_url.replace(/(http|https):\/\//, ''));
+    if (!/.gif$/.test(_url)){
+      _.src = 'https://imagex.aratech.co/?url=' + encodeURI(_url.replace(/(http|https):\/\//, ''));
+    } else {
+      _.src = "https://api.allorigins.win/raw?url=" + _url
+    }
     _.addEventListener("error", ()=> {_.src = "https://api.allorigins.win/raw?url=" + _url})
     _.addEventListener("load", ()=> this.imageSelected = _.src)
   },
